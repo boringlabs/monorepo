@@ -12,6 +12,13 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "deploy": {
+      "dependsOn": ["build", "^deploy"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "verify": {
+      "dependsOn": ["deploy", "^verify"]
     }
   }
 }

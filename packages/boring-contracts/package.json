@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "test": "forge test",
-    "build": "source .env && cannon build cannonfile.toml --chain-id $CHAIN_ID --provider-url $PROVIDER_URL --private-key $PRIVATE_KEY",
-    "dev": "cannon boring --registry-priority local",
+    "build": "cannon build cannonfile.toml",
+    "deploy": "source .env && cannon build --chain-id $CHAIN_ID --provider-url $PROVIDER_URL --private-key $PRIVATE_KEY",
+    "run": "cannon boring --registry-priority local",
     "verify": "source .env && cannon verify boring --api-key $API_KEY --chain-id $CHAIN_ID",
-    "inspect": "source .env && cannon inspect boring --chain-id $CHAIN_ID -w ./deployments",
     "install:forge": "forge install foundry-rs/forge-std --no-commit",
     "install:cannon": "forge install usecannon/cannon-std --no-commit",
     "postinstall": "npm run install:cannon && npm run install:forge"

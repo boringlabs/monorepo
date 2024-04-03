@@ -6,7 +6,9 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "start": "turbo start",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "deploy": "turbo deploy",
+    "verify": "turbo verify"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.69.1",
