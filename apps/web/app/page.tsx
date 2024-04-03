@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "boring-ui/button";
 
+import { Button } from "@boring/ui/button";
 import { useQuery, gql } from '@apollo/client';
 
 const GET_COUNTER_UPDATES = gql`
@@ -28,13 +28,18 @@ export default function Page(): JSX.Element {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  return data.counterUpdates.map(({ id, count, transactionHash }: CounterUpdates) => (
-    <div key={id}>
-      <h3>{count}</h3>
-      <br />
-      <b>About this location:</b>
-      <p>{transactionHash}</p>
-      <br />
+  return (
+    <div>
+      <h1>Counter Updates</h1>
+      <ul>
+        {data.counterUpdates.map((update: CounterUpdates) => (
+          <li key={update.id}>
+            <p>Transaction Hash: {update.transactionHash}</p>
+            <p>Count: {update.count}</p>
+          </li>
+        ))}
+      </ul>
+      <Button appName="BoringJobs">Click Me</Button>
     </div>
-  ));
+  );
 }

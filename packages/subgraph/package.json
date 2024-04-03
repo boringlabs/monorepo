@@ -1,5 +1,5 @@
 {
-  "name": "boring-subgraph",
+  "name": "@boring/subgraph",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",

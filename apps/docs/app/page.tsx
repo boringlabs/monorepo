@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Card } from "boring-ui/card";
-import { Code } from "boring-ui/code";
+import { Card } from "@boring/ui/card";
+import { Code } from "@boring/ui/code";
 import styles from "./page.module.css";
-import { Button } from "boring-ui/button";
+import { Button } from "@boring/ui/button";
 
 function Gradient({
   conic,

@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.69.1",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@boring/eslint-config": "workspace:*",
+    "@boring/typescript-config": "workspace:*",
     "@usecannon/cli": "^2.11.24",
     "dotenv-cli": "^7.4.1",
     "prettier": "^3.2.5",
