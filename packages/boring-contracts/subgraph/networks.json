@@ -1,8 +1,0 @@
-{
-  "base-sepolia": {
-    "Proxy": {
-      "address": "0xc45D106bF45A00e56f5A5195E39646Cd87778e9d",
-      "startBlock": 8198598
-    }
-  }
-}
