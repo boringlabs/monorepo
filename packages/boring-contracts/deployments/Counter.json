@@ -1,0 +1,59 @@
+{
+  "address": "0x0941469638D9278531C0a01f8416ed09188b9296",
+  "abi": [
+    {
+      "type": "function",
+      "name": "count",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "increment",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "setCount",
+      "inputs": [
+        {
+          "name": "newCount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "CounterUpdate",
+      "inputs": [
+        {
+          "name": "count",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0x562058cd39167558e8552419a16997824fd3fe7ab0dfda9dacb66b1b15d5d4df",
+  "sourceName": "src/Counter.sol",
+  "contractName": "Counter",
+  "deployedOn": "contract.Counter",
+  "gasUsed": 161453,
+  "gasCost": "1000294"
+}

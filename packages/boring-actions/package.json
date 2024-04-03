@@ -1,0 +1,10 @@
+{
+    "name": "boring-actions",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "gen": "thirdweb generate 84532/0xc45D106bF45A00e56f5A5195E39646Cd87778e9d"
+    },
+    "devDependencies": {}
+  }
+  

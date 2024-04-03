@@ -5,12 +5,17 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "start": "turbo start",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.69.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@usecannon/cli": "^2.11.24",
+    "dotenv-cli": "^7.4.1",
     "prettier": "^3.2.5",
+    "thirdweb": "^5.1.1",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
