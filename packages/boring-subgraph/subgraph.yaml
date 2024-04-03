@@ -24,3 +24,23 @@ dataSources:
         - event: CounterUpdate(uint256)
           handler: handleCounterUpdate
       file: ./src/counter.ts
+  - kind: ethereum
+    name: Greeter
+    network: base-sepolia
+    source:
+      address: "0x8E0c1671d405ba363c8fB423dC6B12e38475747c"
+      abi: Greeter
+      startBlock: 8198569
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - NewGreeting
+      abis:
+        - name: Greeter
+          file: ./abis/Greeter.json
+      eventHandlers:
+        - event: NewGreeting(string)
+          handler: handleNewGreeting
+      file: ./src/greeter.ts

@@ -5,3 +5,10 @@ type CounterUpdate @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+type NewGreeting @entity(immutable: true) {
+  id: Bytes!
+  newGreeting: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
