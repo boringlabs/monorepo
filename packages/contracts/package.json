@@ -5,7 +5,7 @@
   "scripts": {
     "test": "forge test",
 
-    "build:base-sepolia": "source .env && cannon build --dry-run --provider-url https://84532.rpc.thirdweb.com --chain-id 84532 --private-key $PRIVATE_KEY omnibus-base-sepolia.toml",
+    "build:base-sepolia": "source .env && cannon build --provider-url https://84532.rpc.thirdweb.com --chain-id 84532 --private-key $PRIVATE_KEY omnibus-base-sepolia.toml",
     "verify:base-sepolia": "source .env && cannon verify --chain-id 84532 --api-key $VERIFICATION_API_KEY boring-omnibus:latest@main",
     "start:base-sepolia": "source .env && cannon run --port 8545 --provider-url https://84532.rpc.thirdweb.com --private-key $PRIVATE_KEY boring-omnibus:latest@main",
 
