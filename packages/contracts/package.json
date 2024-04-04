@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "test": "forge test",
-    "build": "cannon build cannonfile.toml",
-    "deploy": "source .env && cannon build --chain-id $CHAIN_ID --provider-url $PROVIDER_URL --private-key $PRIVATE_KEY",
-    "run": "cannon boring --registry-priority local",
-    "verify": "source .env && cannon verify boring --api-key $API_KEY --chain-id $CHAIN_ID",
+
+    "build:base-sepolia": "source .env && cannon build --dry-run --provider-url https://84532.rpc.thirdweb.com --chain-id 84532 --private-key $PRIVATE_KEY omnibus-base-sepolia.toml",
+    "verify:base-sepolia": "source .env && cannon verify --chain-id 84532 --api-key $VERIFICATION_API_KEY boring-omnibus:latest@main",
+    "start:base-sepolia": "source .env && cannon run --port 8545 --provider-url https://84532.rpc.thirdweb.com --private-key $PRIVATE_KEY boring-omnibus:latest@main",
+
     "install:forge": "forge install foundry-rs/forge-std --no-commit",
     "install:cannon": "forge install usecannon/cannon-std --no-commit",
     "postinstall": "npm run install:cannon && npm run install:forge"

@@ -1,0 +1,44 @@
+name = "boring-omnibus"
+version = "0.0.0"
+description = "A boring contract"
+
+# Configurable Proxy admin, this will be the account that will be able to upgrade
+# the proxy's implementation on the future
+[setting.admin]
+defaultValue = "0x5dEd3dC9685E314F2C72926920ac884c5D61D25A" # Test Account 0
+
+# Counter and Greeeter are the example modules that are going to be accessible
+# behind our Proxy + Router architecture
+[contract.Counter]
+artifact = "Counter"
+
+[contract.Greeter]
+artifact = "Greeter"
+
+# Generate a single Router contract merging all the desired implementations
+[router.Router]
+contracts = [
+  "Counter",
+  "Greeter",
+]
+
+# # Deploy a new Proxy using as implementation our just craeted Router
+# [provision.proxy]
+# source = "transparent-upgradable-proxy:4.9.3"
+# options.admin = "<%= settings.admin %>"
+# options.implementation = "<%= contracts.Router.address %>"
+# options.abi = "<%= JSON.stringify(contracts.Router.abi) %>"
+
+# # Make example contracts calls, through the Proxy
+
+# # Call Counter.setCount
+# [invoke.setCount]
+# target = ["proxy.Proxy"]
+# func = "setCount"
+# args = [1]
+
+# # Call Greeter.setGreeting
+# [invoke.setGreeting]
+# target = ["proxy.Proxy"]
+# func = "setGreeting"
+# args = ["hello world!!"]
